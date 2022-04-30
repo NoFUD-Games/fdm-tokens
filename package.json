@@ -1,0 +1,44 @@
+{
+  "name": "fdm-fundamentals-dont-matter-token",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "build": "truffle compile",
+    "develop": "npm run truffle:deploy --network=development",
+    "deploy-mumbai": "npm run truffle:deploy:token --network=mumbai",
+    "truffle:deploy:token": "truffle migrate --compile-all  -f 1 --to 1 --network $npm_config_network",
+    "lint": "solhint contracts/*.sol --formatter stylish",
+    "lint:fix": "solhint contracts/*.sol --formatter stylish --fix",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate-docs": "solidity-docgen -t . --solc-module solc-0.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NoFUD-Games/fdm-token.git"
+  },
+  "author": "NoFUD Games",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/NoFUD-Games/fdm-token/issues"
+  },
+  "homepage": "https://github.com/NoFUD-Games/fdm-token#readme",
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.4.2",
+    "@openzeppelin/contracts-upgradeable": "^4.4.2",
+    "@truffle/hdwallet-provider": "^2.0.1",
+    "dotenv": "^10.0.0",
+    "jsbi": "^3.2.5",
+    "logops": "^2.1.1",
+    "solhint": "^3.3.6",
+    "truffle": "^5.4.30"
+  },
+  "devDependencies": {
+    "@openzeppelin/truffle-upgrades": "^1.12.0",
+    "solidity-docgen": "^0.5.14",
+    "truffle-plugin-verify": "^0.5.21"
+  }
+}
