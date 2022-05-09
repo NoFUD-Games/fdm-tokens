@@ -5,7 +5,7 @@ import "@openzeppelin/contracts-upgradeable/token/ERC20/extensions/draft-ERC20Pe
 import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
 
 ///	@title	FDM  token contract
-contract Ballast is OwnableUpgradeable, ERC20PermitUpgradeable {
+contract FDM is OwnableUpgradeable, ERC20PermitUpgradeable {
 
     function initialize() initializer public {
         __ERC20_init("Fundamentals Dont Matter", "FDM");
